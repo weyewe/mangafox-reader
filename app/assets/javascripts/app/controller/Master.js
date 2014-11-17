@@ -67,6 +67,30 @@ Ext.define("AM.controller.Master", {
 				]
 			}, 
 			{ 
+				text:'Comic', 
+				viewClass:'AM.view.master.Comic', 
+				leaf:true, 
+				iconCls:'text',
+				conditions : [
+				{
+					controller : 'comics',
+					action : 'index'
+				}
+				]
+			},
+			{ 
+				text:'Chapter', 
+				viewClass:'AM.view.master.Chapter', 
+				leaf:true, 
+				iconCls:'text',
+				conditions : [
+				{
+					controller : 'chapters',
+					action : 'index'
+				}
+				]
+			},
+			{ 
 				text:'Customer', 
 				viewClass:'AM.view.master.Customer', 
 				leaf:true, 

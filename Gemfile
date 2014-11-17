@@ -38,6 +38,23 @@ group :doc do
 end
 
 
+
+gem  'httparty'
+
+gem 'nokogiri'
+# gem 'jbuilder'
+gem 'kaminari'
+gem 'bootstrap-kaminari-views'
+
+gem  'iron_worker_ng'
+
+gem 'exceptional'  # added exceptional.. but, it is not shown to be working
+gem 'heroku'
+
+gem 'roadie' # for sending email 
+
+
+
 gem 'devise'
 gem "kaminari"  
 gem 'uuidtools'

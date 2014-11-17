@@ -11,10 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140625063942) do
+ActiveRecord::Schema.define(version: 20141117135349) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "chapters", force: true do |t|
+    t.integer  "comic_id"
+    t.string   "chapter"
+    t.string   "volume"
+    t.string   "initial_link"
+    t.boolean  "is_parsed",    default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "comics", force: true do |t|
+    t.string   "name"
+    t.string   "vanity_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "contract_items", force: true do |t|
     t.integer  "contract_maintenance_id"
@@ -95,6 +112,14 @@ ActiveRecord::Schema.define(version: 20140625063942) do
     t.boolean  "is_solved",      default: false
     t.boolean  "is_confirmed",   default: false
     t.boolean  "is_deleted",     default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pages", force: true do |t|
+    t.integer  "chapter_id"
+    t.integer  "comic_id"
+    t.string   "image_url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

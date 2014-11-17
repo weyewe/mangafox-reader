@@ -2,6 +2,10 @@ Ticketie::Application.routes.draw do
   devise_for :users
   root :to => 'home#index'
   
+  get 'show_chapter/:id' , :to => "chapters#show_chapter", :as => :show_chapter
+  resources :chapters 
+  
+  
   
   namespace :api do
     devise_for :users
@@ -20,6 +24,9 @@ Ticketie::Application.routes.draw do
     resources :customers 
     resources :item_types  
     resources :items 
+    
+    resources :comics 
+    resources :chapters 
     
     resources :maintenances
     

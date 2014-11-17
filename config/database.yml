@@ -15,7 +15,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: ticketie_development
+  database: comic_mangafox_development
   pool: 5
   username: weyewe
 
@@ -40,13 +40,13 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: ticketie_test
+  database: comic_mangafox_test
   pool: 5
   username: weyewe
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: ticketie_production
+  database: comic_mangafox_production
   pool: 5
   username: weyewe
